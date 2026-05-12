@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+header {
+    background: linear-gradient(90deg, #2f2f2f 0%, #1a1a1a 100%);
+    border-bottom: 4px solid #e30613;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-section img {
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+    border: 2px solid #e30613;
+}
+
+.logo-section h1 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #e30613;
+    background: rgba(227, 6, 19, 0.1);
+}
+
+.auth-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+    border-left: 2px solid #444;
+    padding-left: 20px;
+}
+
+#userDisplay {
+    color: #e30613;
+    font-weight: 700;
+    font-size: 15px;
+    min-width: 150px;
+}
+
+#loginBtn {
+    background: linear-gradient(135deg, #e30613 0%, #b80410 100%);
+    color: white !important;
+    padding: 10px 20px !important;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#loginBtn:hover {
+    background: linear-gradient(135deg, #b80410 0%, #8b0308 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(227, 6, 19, 0.4);
+}
+
+.logout-btn {
+    background: #e30613;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #b80410;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(227, 6, 19, 0.4);
+}
+
+
+.imagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.projeto-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(227, 6, 19, 0.3);
+}
+
+.projeto-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.projeto-card:hover img {
+    transform: scale(1.05);
+}
+
+.projeto-card h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.projeto-card:hover h3 {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .auth-container {
+        border-left: none;
+        border-top: 2px solid #444;
+        padding-left: 0;
+        padding-top: 15px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .logo-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-section h1 {
+        font-size: 22px;
+    }
+
+    .imagens {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
